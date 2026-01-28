@@ -65,7 +65,7 @@ The extension uses a **heartbeat-based tracking system**:
 ```typescript
 {
   entity: "/path/to/file.ts",           // File path
-  time: 1642342800.0,                   // UNIX timestamp
+  time: 1738084800.0,                   // UNIX timestamp (e.g., 2025-01-28)
   is_write: true,                       // Write operation?
   lineno: 42,                           // Cursor line number
   cursorpos: 15,                        // Cursor column position
@@ -293,19 +293,22 @@ execFile(cli, primaryHeartbeat, {
 
 ### API Endpoints
 
-The CLI communicates with these endpoints:
+The CLI communicates with these endpoints (base URL: `https://api.wakatime.com/api/v1`):
 
-1. **POST /api/v1/users/current/heartbeats**
+1. **POST /users/current/heartbeats** (or `/heartbeats`)
    - Sends activity data
    - Batch upload supported
+   - Full URL: `https://api.wakatime.com/api/v1/users/current/heartbeats`
 
-2. **GET /api/v1/users/current/summaries**
+2. **GET /users/current/summaries**
    - Fetches daily coding statistics
    - Used for status bar display
+   - Full URL: `https://api.wakatime.com/api/v1/users/current/summaries`
 
-3. **GET /api/v1/users/current/file_experts**
+3. **GET /users/current/file_experts**
    - Retrieves per-file developer expertise
    - Team feature only
+   - Full URL: `https://api.wakatime.com/api/v1/users/current/file_experts`
 
 ### Configuration Management
 
@@ -535,7 +538,7 @@ Die Erweiterung verwendet ein **Heartbeat-basiertes Tracking-System**:
 ```typescript
 {
   entity: "/pfad/zur/datei.ts",         // Dateipfad
-  time: 1642342800.0,                   // UNIX-Zeitstempel
+  time: 1738084800.0,                   // UNIX-Zeitstempel (z.B. 2025-01-28)
   is_write: true,                       // Schreiboperation?
   lineno: 42,                           // Cursor-Zeilennummer
   cursorpos: 15,                        // Cursor-Spaltenposition
@@ -763,19 +766,22 @@ execFile(cli, primaryHeartbeat, {
 
 ### API-Endpunkte
 
-Die CLI kommuniziert mit diesen Endpunkten:
+Die CLI kommuniziert mit diesen Endpunkten (Basis-URL: `https://api.wakatime.com/api/v1`):
 
-1. **POST /api/v1/users/current/heartbeats**
+1. **POST /users/current/heartbeats** (oder `/heartbeats`)
    - Sendet Aktivitätsdaten
    - Batch-Upload unterstützt
+   - Vollständige URL: `https://api.wakatime.com/api/v1/users/current/heartbeats`
 
-2. **GET /api/v1/users/current/summaries**
+2. **GET /users/current/summaries**
    - Ruft tägliche Programmierstatistiken ab
    - Wird für Statusleisten-Anzeige verwendet
+   - Vollständige URL: `https://api.wakatime.com/api/v1/users/current/summaries`
 
-3. **GET /api/v1/users/current/file_experts**
+3. **GET /users/current/file_experts**
    - Ruft Entwickler-Expertise pro Datei ab
    - Nur Team-Funktion
+   - Vollständige URL: `https://api.wakatime.com/api/v1/users/current/file_experts`
 
 ### Konfigurationsverwaltung
 
