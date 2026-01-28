@@ -65,7 +65,7 @@ The extension uses a **heartbeat-based tracking system**:
 ```typescript
 {
   entity: "/path/to/file.ts",           // File path
-  time: 1738084800.0,                   // UNIX timestamp (e.g., 2025-01-28)
+  time: 1738084800.0,                   // UNIX timestamp (e.g., 2026-01-28)
   is_write: true,                       // Write operation?
   lineno: 42,                           // Cursor line number
   cursorpos: 15,                        // Cursor column position
@@ -538,7 +538,7 @@ Die Erweiterung verwendet ein **Heartbeat-basiertes Tracking-System**:
 ```typescript
 {
   entity: "/pfad/zur/datei.ts",         // Dateipfad
-  time: 1738084800.0,                   // UNIX-Zeitstempel (z.B. 2025-01-28)
+  time: 1738084800.0,                   // UNIX-Zeitstempel (z.B. 2026-01-28)
   is_write: true,                       // Schreiboperation?
   lineno: 42,                           // Cursor-Zeilennummer
   cursorpos: 15,                        // Cursor-Spaltenposition
